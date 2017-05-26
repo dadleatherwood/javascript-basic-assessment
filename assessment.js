@@ -99,16 +99,12 @@ function removeItem (arr, str) {
 
 // #11 Write a function  called doubleTheFun that takes 1 parameter. It should double numbers, and
 // repeats strings. example 4->8, 2.5->5, 'Awesome'->'AwesomeAwesome'
-function doubleTheFun (par) {
-	if (typeof par === 'number'){
-		return par * 2;
-	} else if (typeof par === 'string') {
-	  return par + par
-	}
-	}
-console.log(doubleTheFun(9));
-console.log(doubleTheFun('hey'));
-console.log(doubleTheFun('9'));
+function doubleTheFun(num) {
+  if (Number(num) == num) {
+    num = Number(num)
+  }
+  return num + num;
+}
 
 
 // #12 Write function getValueOfProperty that takes in an object, and the name of a property on the object
@@ -127,7 +123,7 @@ function makeChatMessage (message, author) {
 	var message = {
 		message: message,
 		author: author,
-		date: Date()
+		timestamp: new Date()
 	}
 	return message;
 }
