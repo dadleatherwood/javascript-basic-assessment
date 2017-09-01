@@ -89,11 +89,21 @@ function addItem(arr, item) {
 }
 
 // #10 Write a function called removeItem that takes in an array of strings, and a string.
+//SOLUTION ONE
 function removeItem (arr, str) {
     return arr.filter(function(element){
         return element !== str;
     });
 }
+//SOLUTION TWO
+// function removeItem (arr, str){
+// 	for (var i = arr.length-1;i >= 0;i--) {
+// 		if(arr[i] === str) {
+// 			arr.splice(i,1)
+// 		}
+// 	}
+// 	return arr
+// }
 // Removes all instances of that string from the array. And return the modified array.
 // The order of the array should not be changed
 
